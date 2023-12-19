@@ -6,6 +6,17 @@ from mhdwriter.args import WriteArgs, WriteType
 
 
 def generate_header(args: WriteArgs) -> Dict[str, Any]:
+    """
+    Generate a .mhd file for a mhd/raw pair.
+
+    Args:
+        args (WriteArgs): WriteArgs object specifying parameters for the MHD header creation.
+
+    Returns:
+        dict: Returns an ordrered dictionary of relevant metadata key->value pairs.
+
+    """
+
     assert type(args) == WriteArgs, "Invalid WriteArgs"
 
     if isinstance(args.date_time, str):
